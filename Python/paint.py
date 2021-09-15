@@ -42,7 +42,6 @@ def rectangle(start, end):
     pass  # TODO
 
 def triangle(start, end):
-    "Draw triangle from start to end."
     pass  # TODO
 
 def tap(x, y):
