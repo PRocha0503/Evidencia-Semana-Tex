@@ -3,6 +3,7 @@
 Exercises
 
 1. How do you make the snake faster or slower?
+made the ontimer(move, 50) on half
 2. How can you make the snake go around the edges?
 3. How would you move the food?
 4. Change the snake to respond to arrow keys.
@@ -52,7 +53,7 @@ def move():
 
     square(food.x, food.y, 9, 'green')
     update()
-    ontimer(move, 100)
+    ontimer(move, 50)
 
 setup(420, 420, 370, 0)
 hideturtle()
