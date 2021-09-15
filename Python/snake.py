@@ -5,6 +5,7 @@ Exercises
 1. How do you make the snake faster or slower?
 made the ontimer(move, 50) on half
 2. How can you make the snake go around the edges?
+change the inide function to include edges
 3. How would you move the food?
 4. Change the snake to respond to arrow keys.
 
@@ -25,7 +26,7 @@ def change(x, y):
 
 def inside(head):
     "Return True if head inside boundaries."
-    return -200 < head.x < 190 and -200 < head.y < 190
+    return -200 < head.x < 200 and -200 < head.y < 200
 
 def move():
     "Move snake forward one segment."
