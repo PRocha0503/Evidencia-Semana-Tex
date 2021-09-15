@@ -3,6 +3,9 @@
 Exercises:
 
 1. Count and print how many taps occur.
+    Using a global variable named taps, we add 1 everytime we press a tile.
+        - Alfredo Jeong Hyun Park, 2021/09/15, 12:23 PM.
+
 2. Decrease the number of tiles to a 4x4 grid.
 3. Detect when all tiles are revealed.
 4. Center single-digit tile.
@@ -15,9 +18,10 @@ from turtle import *
 from freegames import path
 
 car = path('car.gif')
-tiles = list(range(32)) * 2
+tiles = list(range(8)) * 2
 state = {'mark': None}
-hide = [True] * 64
+hide = [True] * 16
+taps = 0
 
 def square(x, y):
     "Draw white square with black outline at (x, y)."
@@ -43,6 +47,9 @@ def tap(x, y):
     "Update mark and hidden tiles based on tap."
     spot = index(x, y)
     mark = state['mark']
+    global taps
+    taps += 1
+    print("Taps: " + str(taps))
 
     if mark is None or mark == spot or tiles[mark] != tiles[spot]:
         state['mark'] = spot
@@ -58,7 +65,7 @@ def draw():
     shape(car)
     stamp()
 
-    for count in range(64):
+    for count in range(16):
         if hide[count]:
             x, y = xy(count)
             square(x, y)
