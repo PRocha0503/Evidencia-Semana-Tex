@@ -95,12 +95,16 @@ def square(x,y):
 #### Snake
 -changed the color of the snake from black to blue
  for body in snake:
-        square(body.x, body.y, 9, 'blue')#a modification was done here
+    
+square(body.x, body.y, 9, 'blue')#a modification was done here
 
 #### Memory
 
 -changed the coloures of the tiles and the lines of the tiles
+
+
 def square(x, y):
+
     "Draw white square with black outline at (x, y)."
     up()
     goto(x, y)
