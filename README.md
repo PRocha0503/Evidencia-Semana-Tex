@@ -58,6 +58,35 @@ write(tiles[mark], font=('Arial', 30, 'bold'))
 setup(840, 840, 370, 0)
 ```
 
+### Alfredo Jeong Hyun Park
+
+#### Snake
+
+```
+speed = 100
+
+if head == food:
+   # Increase speed everytime food is eaten
+   global speed
+   speed -= 6
+   print('Snake:', len(snake))
+   food.x = randrange(-15, 15) * 10
+   food.y = randrange(-15, 15) * 10
+else:
+   snake.pop(0)
+```
+
+#### Memory
+
+```
+taps = 0
+
+def square(x,y):
+   global taps
+   taps += 1
+   print("Taps: " + str(taps))
+```
+
 ### Installing the Freegames module
 
 1. Make sure Python 3 is installed in your computer, and that you can call
