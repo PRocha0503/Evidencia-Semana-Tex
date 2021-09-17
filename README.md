@@ -1,35 +1,76 @@
 # TC1001S - Herramientas Computacionales
-Sample code for the Computer Tools course challenge
 
-Author: Gilberto Echeverria
+This is a code to learn how to use github, we used it as practice
+
+Author: Pablo Rocha A01028638,
 
 Original games code from: http://www.grantjenks.com/docs/freegames/index.html
-Games included:
-- Paint
+
+We selected this 3 games
+
 - Snake
-- Pacman
 - Cannon
 - Memory
 
-## Installing the Freegames module
+## Changes made by each member
+
+### Pablo Rocha
+
+#### Snake
+
+- changed the speed of the snake
+
+```
+ontimer(move, 50)
+```
+
+- made the snake able to go to the edges
+
+```
+return -210 < head.x < 210 and -210 < head.y < 210
+```
+
+#### Cannon
+
+- made the ball never go down
+
+```
+speed.y -= 0.1
+```
+
+- changed the color of the targets
+
+```
+dot(20, 'orange')
+```
+
+#### Memory
+
+- made the font bold
+
+```
+write(tiles[mark], font=('Arial', 30, 'bold'))
+```
+
+- change the size of the window
+
+```
+setup(840, 840, 370, 0)
+```
+
+### Installing the Freegames module
 
 1. Make sure Python 3 is installed in your computer, and that you can call
    it from a terminal
 2. Download the pip installer from: https://bootstrap.pypa.io/get-pip.py
 3. Run the installer:
+
 ```
 python3 get-pip.py
 ```
+
 4. Install the module:
+
 ```
 pip install freegames
 ```
-
-## Installing on MobaXterm (Windows)
-
-To install the required software, run the following commands:
-
-1. apt-get install python3
-2. apt-get install python3-tkinter
-3. apt-get install python3-pip
-4. pip3 install freegames
