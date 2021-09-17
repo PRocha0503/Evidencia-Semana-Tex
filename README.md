@@ -2,7 +2,7 @@
 
 This is a code to learn how to use github, we used it as practice
 
-Author: Pablo Rocha A01028638,
+Author: Pablo Rocha A01028638, Alfredo Jeong Hyun Park A01658259,
 
 Original games code from: http://www.grantjenks.com/docs/freegames/index.html
 
