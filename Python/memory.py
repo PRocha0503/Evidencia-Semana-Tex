@@ -79,14 +79,16 @@ def draw():
         up()
         goto(x + 2, y)
         color('black')
-        write(tiles[mark], font=('Arial', 30, 'normal'))
+        #change the lfont type
+        write(tiles[mark], font=('Arial', 30, 'bold'))
 
     update()
     ontimer(draw, 100)
 
 
 shuffle(tiles)
-setup(420, 420, 370, 0)
+#made th window bigger
+setup(840, 840, 370, 0)
 addshape(car)
 hideturtle()
 tracer(False)
