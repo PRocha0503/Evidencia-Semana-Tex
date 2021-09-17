@@ -35,7 +35,7 @@ def draw():
     #changed the color of the targets
     for target in targets:
         goto(target.x, target.y)
-        dot(20, 'orange')
+        dot(40, 'orange')
 
     if inside(ball):
         goto(ball.x, ball.y)
