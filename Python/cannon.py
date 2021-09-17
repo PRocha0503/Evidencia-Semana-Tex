@@ -6,7 +6,7 @@ Exercises
 2. Vary the effect of gravity.
 3. Apply gravity to the targets.
 4. Change the speed of the ball.
-
+Done
 """
 
 from random import randrange
@@ -32,10 +32,10 @@ def inside(xy):
 def draw():
     "Draw ball and targets."
     clear()
-
+    #changed the color of the targets
     for target in targets:
         goto(target.x, target.y)
-        dot(20, 'blue')
+        dot(20, 'orange')
 
     if inside(ball):
         goto(ball.x, ball.y)
@@ -53,11 +53,11 @@ def move():
 
     # Move the existing targets
     for target in targets:
-        target.x -= 0.5
+        target.x -= 1
 
-    # Move the cannon shot
+    # Move the cannon shot, the ball now goes straight
     if inside(ball):
-        speed.y -= 0.35
+        speed.y -= 0.1
         ball.move(speed)
 
     # Make a copy of the existing target list before redrawing
