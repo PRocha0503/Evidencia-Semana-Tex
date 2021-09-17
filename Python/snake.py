@@ -18,6 +18,7 @@ from freegames import square, vector
 food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
+speed = 100
 
 def change(x, y):
     "Change snake direction."
@@ -41,6 +42,9 @@ def move():
     snake.append(head)
 
     if head == food:
+        # Increase speed everytime food is eaten
+        global speed
+        speed -= 6
         print('Snake:', len(snake))
         food.x = randrange(-15, 15) * 10
         food.y = randrange(-15, 15) * 10
@@ -54,7 +58,7 @@ def move():
 
     square(food.x, food.y, 9, 'green')
     update()
-    ontimer(move, 50)
+    ontimer(move, speed)
 
 setup(420, 420, 370, 0)
 hideturtle()
