@@ -2,7 +2,7 @@
 
 This is a code to learn how to use github, we used it as practice
 
-Author: Pablo Rocha A01028638, Alfredo Jeong Hyun Park A01658259,
+Author: Pablo Rocha A01028638, Alfredo Jeong Hyun Park A01658259, Salvador Ulibarri A01066922
 
 Original games code from: http://www.grantjenks.com/docs/freegames/index.html
 
@@ -90,6 +90,28 @@ def square(x,y):
    taps += 1
    print("Taps: " + str(taps))
 ```
+### Salvador Ulibarri Sierra A01066922
+
+#### Snake
+-changed the color of the snake from black to blue
+ for body in snake:
+        square(body.x, body.y, 9, 'blue')#a modification was done here
+
+#### Memory
+
+-changed the coloures of the tiles and the lines of the tiles
+def square(x, y):
+    "Draw white square with black outline at (x, y)."
+    up()
+    goto(x, y)
+    down()
+    color('white', 'blue') # a change was made here
+    begin_fill()
+    for count in range(4):
+        forward(50)
+        left(90)
+    end_fill()
+
 
 ### Installing the Freegames module
 
