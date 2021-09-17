@@ -62,6 +62,8 @@ setup(840, 840, 370, 0)
 
 #### Snake
 
+- Made speed increase everytime food is eaten
+
 ```
 speed = 100
 
@@ -77,6 +79,8 @@ else:
 ```
 
 #### Memory
+
+- Added counting total taps
 
 ```
 taps = 0
